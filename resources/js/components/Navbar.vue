@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-transparent">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="https://i.postimg.cc/x8tTQ6vq/nav-icon-hover.png" alt="Ubicom Group" height="40">
+      <img :src="require('../../images/assets/nav-icon-hover.png')" alt="Ubicom Group" height="40">
         Member of Ubicom Group
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,12 +46,27 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'Navbar',
 }
 </script>
 
 <style scoped>
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
 .navbar-brand img {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }

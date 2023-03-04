@@ -6,9 +6,8 @@
 
 
 require('./bootstrap');
-import ExampleComponent from './components/ExampleComponent.vue'
 import Navbar from './components/Navbar.vue'
-import Banner from './components/Banner.vue'
+import Footer from './components/Footer.vue'
 
 window.Vue = require('vue').default;
 
@@ -23,9 +22,8 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', ExampleComponent);
 Vue.component('navbar', Navbar);
-Vue.component('banner', Banner);
+Vue.component('fter', Footer);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,7 +36,7 @@ const app = new Vue({
     el: '#app',
     components: {
         Navbar,
-        Banner,
+        Footer,
       },
 });
 

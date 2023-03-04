@@ -3,43 +3,89 @@
 <head>
     <title>Welcome to Laravel-Vue.js</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body>
     <div id="app">
-        <navbar></navbar>
+      <navbar></navbar>
         <div class="banner">
-            <img src="https://i.postimg.cc/JnNNCL0j/skyscrapers-ge41a4feda-1920-1-2.png">
+            <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper" class="banner-img">
             <div class="banner-text">
                 <h1>Global IT Excellence</h1>
                 <p> Human Resource | Business | Technology | Innovation</p>
             </div>
         </div> 
+
         <div class="content">
             <div class="text animated">
                 <h1>"Being on top is easy. Sustaining is another story."</h1>
-                <h>
+                <h4>
                 Twenty five (25) years in the business prove our strength in various technologies, deep knowledge of major industries, and excellence in quality service delivery only by engineering experts.
                 </br>Quality lies in adopting international standard processes in development. Innovation is adapting and embracing technology to grow the business.
                 </br>Consistency in quality delivery and innovation makes AWS your strategic partner in global business. Together, we sustain your competitive advantage.
-                </h3>
+                </h4>
             </div>
             <div class="image animated">
-                <img src="https://i.postimg.cc/yYgNP9qW/sustainable-growth.jpg">
+              <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper">
             </div>
         </div>
-        <div class="content">
-           <h1>SERVICES AND SOLUTIONS</h1>
+
+        <div class="carousel">
+          <div class="carousel-item active">
+            <img src="image1.jpg" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="image2.jpg" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="image3.jpg" alt="Image 3">
         </div>
+</div>
+        
+        
+        
 
 
-       
+       <fter></fter>
     </div>
     
 </body>
 </html>
 
 <style scoped>
+  /**CAROUSEL */
+  .carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item.next {
+  z-index: -1;
+  transform: scale(0.8) translateX(10%);
+}
+
+.carousel-item.prev {
+  z-index: -1;
+  transform: scale(0.8) translateX(-10%);
+}
+
   /**CONTENT */
   .content {
     display: flex;
@@ -88,14 +134,36 @@
   /** Banner CSS */
   .banner {
     height: 100vh;
+    background-size: cover;
+    background-position: 50%;
     position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
   }
+  @media only screen and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait){
+      .banner {
+      height: 55vh;
+    }
+  }
+  @media only screen and (max-width: 800px) and (max-height: 1280px) and (orientation: portrait){
+      .banner {
+        height: 55vh;
+    }
+}
 
-  .banner img {
+
+  .banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  @media screen and (max-width: 767px) {
+  .banner {
+    height: 50vh;
+  }
+}
 
   .banner-text {
     position: absolute;
