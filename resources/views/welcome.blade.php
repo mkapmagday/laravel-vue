@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-carousel-3d@0.2.0/dist/vue-carousel-3d.min.js"></script>
+
 </head>
 <body>
     <div id="app">
@@ -30,46 +33,22 @@
               <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper">
             </div>
         </div>
-
-
-
-        
-
-
-        
-
+        <div class="carousel-text">
+          <h3>SERVICES & SOLUTIONS</h3>
+          <h1>GET THE BEST SERVICE FOR YOUR NEEDS</h1>
+          <carousel></carousel>
+        </div>
 
         
-        
-        
-
-
        <fter></fter>
     </div>
-    
+
 </body>
 </html>
 
+
 <style scoped>
-  /**CAROUSEL */
-  .carousel-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  width: 300%;
-}
-
-.carousel-slide {
-  flex: 1;
-  margin-right: 30px;
-}
-
-.carousel-slide img {
-  width: 100%;
-}
+  /**CAROUSEL CONTENT */
 
   /**CONTENT */
   .content {

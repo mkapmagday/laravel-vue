@@ -8,6 +8,9 @@
 require('./bootstrap');
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import Carousel from './components/Carousel.vue';
+
+import Carousel3d from 'vue-carousel-3d';
 
 window.Vue = require('vue').default;
 
@@ -24,6 +27,9 @@ window.Vue = require('vue').default;
 
 Vue.component('navbar', Navbar);
 Vue.component('fter', Footer);
+Vue.component('carousel',Carousel);
+Vue.use(Carousel3d)
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -37,43 +43,8 @@ const app = new Vue({
     components: {
         Navbar,
         Footer,
+        Carousel,
       },
 });
 
-var util = {
-    mobileMenu() {
-      $("#nav").toggleClass("nav-visible");
-    },
-    windowResize() {
-      if ($(window).width() > 800) {
-        $("#nav").removeClass("nav-visible");
-      }
-    },
-    scrollEvent() {
-      var scrollPosition = $(document).scrollTop();
-      
-      $.each(util.scrollMenuIds, function(i) {
-        var link = util.scrollMenuIds[i],
-            container = $(link).attr("href"),
-            containerOffset = $(container).offset().top,
-            containerHeight = $(container).outerHeight(),
-            containerBottom = containerOffset + containerHeight;
-  
-        if (scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20) {
-          $(link).addClass("active");
-        } else {
-          $(link).removeClass("active");
-        }
-      });
-    }
-  };
-  
-  $(document).ready(function() {
-    
-    util.scrollMenuIds = $("a.nav-link[href]");
-    $("#menu").click(util.mobileMenu);
-    $(window).resize(util.windowResize);
-    $(document).scroll(util.scrollEvent);
-    
-  });
   
