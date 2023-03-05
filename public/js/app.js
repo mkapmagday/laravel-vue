@@ -5360,6 +5360,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Navbar'
@@ -10760,7 +10761,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-6dde423b] {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  background-color: transparent;\r\n  transition: background-color 0.5s ease;\n}\n.navbar.scrolled[data-v-6dde423b] {\r\n  background-color: white;\r\n  transition: background-color 0.5s ease;\n}\n.navbar-brand img[data-v-6dde423b] {\r\n  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b]:hover {\r\n  color: #007bff;\n}\n.dropdown-menu[data-v-6dde423b] {\r\n  border: none;\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n}\n.dropdown-item[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.dropdown-item[data-v-6dde423b]:hover {\r\n  color: #007bff;\r\n  background-color: transparent;\n}\n.dropdown-menu[data-v-6dde423b]::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -10px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 10px solid transparent;\r\n  border-bottom-color: #fff;\n}\n.dropdown-menu[data-v-6dde423b]::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -8px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 8px solid transparent;\r\n  border-bottom-color: rgba(0, 0, 0, 0.15);\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-6dde423b] {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  background-color: transparent;\r\n  transition: background-color 0.5s ease;\n}\n.navbar.scrolled[data-v-6dde423b] {\r\n  background-color: white;\r\n  transition: background-color 0.5s ease;\n}\n.navbar-brand[data-v-6dde423b] {\r\n  display: flex;\r\n  align-items: center;\n}\n.navbar-brand img[data-v-6dde423b] {\r\n  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));\r\n  margin-right: 10px;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b]:hover {\r\n  color: #007bff;\n}\n.dropdown-menu[data-v-6dde423b] {\r\n  border: none;\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n}\n.dropdown-item[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.dropdown-item[data-v-6dde423b]:hover {\r\n  color: #007bff;\r\n  background-color: transparent;\n}\n.dropdown-menu[data-v-6dde423b]::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -10px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 10px solid transparent;\r\n \r\n\r\n  border-bottom-color: #fff;\n}\n.dropdown-menu[data-v-6dde423b]::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -8px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 8px solid transparent;\r\n  border-bottom-color: rgba(0, 0, 0, 0.15);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42557,7 +42558,16 @@ var staticRenderFns = [
         _c("div", { staticClass: "row mb-3" }, [
           _c("div", { staticClass: "col-md-8" }, [
             _c("p", { staticClass: "text-muted small" }, [
-              _vm._v("© 2023 Company Name. All rights reserved."),
+              _vm._v("© Copyright © 2022, All Right Reserved "),
+              _c(
+                "a",
+                { attrs: { href: "https://www.awsys-i.com/en/home.php" } },
+                [
+                  _vm._v(
+                    "Advanced World Systems, Inc. | Advanced World Solutions, Inc."
+                  ),
+                ]
+              ),
             ]),
           ]),
           _vm._v(" "),
@@ -42615,31 +42625,33 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    {
-      staticClass:
-        "navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-transparent",
-    },
-    [
-      _c("div", { staticClass: "container" }, [
-        _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
-          _c("img", {
-            attrs: {
-              src: __webpack_require__(/*! ../../images/assets/nav-icon-hover.png */ "./resources/images/assets/nav-icon-hover.png"),
-              alt: "Ubicom Group",
-              height: "40",
-            },
-          }),
-          _vm._v("\n      Member of Ubicom Group\n    "),
+  return _c("div", [
+    _c(
+      "nav",
+      {
+        staticClass:
+          "navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-transparent",
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/nav-icon-hover.png */ "./resources/images/assets/nav-icon-hover.png"),
+                alt: "Ubicom Group",
+                height: "40",
+              },
+            }),
+            _vm._v("\r\n        Member of Ubicom Group\r\n      "),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
         ]),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-      ]),
-    ]
-  )
+      ]
+    ),
+  ])
 }
 var staticRenderFns = [
   function () {
@@ -42673,7 +42685,7 @@ var staticRenderFns = [
         attrs: { id: "navbarNav" },
       },
       [
-        _c("ul", { staticClass: "navbar-nav" }, [
+        _c("ul", { staticClass: "navbar-nav ml-auto" }, [
           _c("li", { staticClass: "nav-item" }, [
             _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
               _vm._v("About"),
@@ -42682,13 +42694,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("li", { staticClass: "nav-item" }, [
             _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Services"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Solutions"),
+              _vm._v("Services & Solutions"),
             ]),
           ]),
           _vm._v(" "),
@@ -42723,7 +42729,7 @@ var staticRenderFns = [
                   "aria-expanded": "false",
                 },
               },
-              [_vm._v("\n            Account\n          ")]
+              [_vm._v("\r\n              Account\r\n            ")]
             ),
             _vm._v(" "),
             _c(

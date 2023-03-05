@@ -31,17 +31,14 @@
             </div>
         </div>
 
-        <div class="carousel">
-          <div class="carousel-item active">
-            <img src="image1.jpg" alt="Image 1">
-          </div>
-          <div class="carousel-item">
-            <img src="image2.jpg" alt="Image 2">
-          </div>
-          <div class="carousel-item">
-            <img src="image3.jpg" alt="Image 3">
-        </div>
-</div>
+
+
+        
+
+
+        
+
+
         
         
         
@@ -55,35 +52,23 @@
 
 <style scoped>
   /**CAROUSEL */
-  .carousel {
-  position: relative;
+  .carousel-container {
   width: 100%;
-  height: 500px;
   overflow: hidden;
 }
 
-.carousel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
+.carousel {
+  display: flex;
+  width: 300%;
+}
+
+.carousel-slide {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.carousel-slide img {
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.carousel-item.active {
-  opacity: 1;
-}
-
-.carousel-item.next {
-  z-index: -1;
-  transform: scale(0.8) translateX(10%);
-}
-
-.carousel-item.prev {
-  z-index: -1;
-  transform: scale(0.8) translateX(-10%);
 }
 
   /**CONTENT */

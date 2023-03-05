@@ -45,7 +45,7 @@
       </div>
       <div class="row mb-3">
         <div class="col-md-8">
-          <p class="text-muted small">&copy; 2023 Company Name. All rights reserved.</p>
+          <p class="text-muted small">&copy; Copyright © 2022, All Right Reserved <a href="https://www.awsys-i.com/en/home.php">Advanced World Systems, Inc. | Advanced World Solutions, Inc.</a></p>
         </div>
         <div class="col-md-4 text-md-end">
           <ul class="list-inline social-icons">
