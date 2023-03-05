@@ -116,6 +116,7 @@ color: #0F76A0;
     flex: 1 1 100%;
     text-align: center;
     margin-top: 25px;
+    margin-right: 100px;
   }
 
   .image img {
