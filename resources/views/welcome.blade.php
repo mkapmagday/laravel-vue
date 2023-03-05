@@ -35,8 +35,8 @@
             </div>
         </div>
         <div class="carousel-content">
-          <h3>SERVICES & SOLUTIONS</h3>
-          <h1>Get The Best Service For Your Needs</h1>
+          <p class="carousel-message">SERVICES & SOLUTIONS</p>
+          <p class="carousel-message1">Get The Best Service For Your <span style ="color:#0F76A0"> Needs</span<</p>
           <carousel></carousel>
         </div>
 
@@ -53,6 +53,26 @@
 .carousel-content{
   text-align: center;
   padding-bottom: 50px;
+}
+.carousel-message{
+  font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height */
+color: #0F76A0;
+}
+.carousel-message1{
+  font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 40px;
+/* identical to box height */
+
+
+
 }
   /**CONTENT */
   .content {
