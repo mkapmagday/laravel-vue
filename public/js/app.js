@@ -5342,41 +5342,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'Carousel',
   components: {
-    Carousel3d: vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__.Carousel3d
+    Carousel3d: vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__.Carousel3d,
+    Slide: vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__.Slide
   },
   data: function data() {
     return {
-      items: [{
-        title: 'Slide 1',
-        image: 'https://via.placeholder.com/300x200?text=Slide+1'
-      }, {
-        title: 'Slide 2',
-        image: 'https://via.placeholder.com/300x200?text=Slide+2'
-      }, {
-        title: 'Slide 3',
-        image: 'https://via.placeholder.com/300x200?text=Slide+3'
-      }, {
-        title: 'Slide 4',
-        image: 'https://via.placeholder.com/300x200?text=Slide+4'
-      }, {
-        title: 'Slide 5',
-        image: 'https://via.placeholder.com/300x200?text=Slide+5'
-      }],
-      activeIndex: 0,
-      slideClass: 'carousel-slide'
+      currentSlide: 1,
+      slidesCount: 6
     };
   },
   methods: {
-    onSlideChange: function onSlideChange(index) {
-      this.activeIndex = index;
+    updateCurrentSlide: function updateCurrentSlide(index) {
+      this.currentSlide = index + 1;
     },
-    onIndicatorClick: function onIndicatorClick(index) {
-      this.activeIndex = index;
+    goToSlide: function goToSlide(index) {
+      this.currentSlide = index;
+      this.$refs.carousel3d.goToSlide(index - 1);
     }
   }
 });
@@ -10795,7 +10781,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carousel-slide {\r\n  opacity: 0.5;\r\n  transition: opacity 0.5s ease-in-out;\n}\n.carousel-slide.is-active {\r\n  opacity: 1;\n}\n.carousel-indicators {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 10px;\n}\n.carousel-indicators span {\r\n  display: inline-block;\r\n  width: 10px;\r\n  height: 10px;\r\n  border-radius: 50%;\r\n  background-color: #ccc;\r\n  margin-right: 10px;\r\n  cursor: pointer;\n}\n.carousel-indicators span.active {\r\n  background-color: #333;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carousel {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.indicator {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 20px;\n}\n.indicator span {\r\n  width: 10px;\r\n  height: 10px;\r\n  border-radius: 50%;\r\n  background-color: #ccc;\r\n  margin: 0 10px;\r\n  cursor: pointer;\n}\n.indicator span.active {\r\n  background-color: #333;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10923,6 +10909,66 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./resources/images/assets/1.jpg":
+/*!***************************************!*\
+  !*** ./resources/images/assets/1.jpg ***!
+  \***************************************/
+/***/ ((module) => {
+
+module.exports = "/images/1.jpg?f5f276c07ecd8c67e4ed591033c79b4f";
+
+/***/ }),
+
+/***/ "./resources/images/assets/2.jpg":
+/*!***************************************!*\
+  !*** ./resources/images/assets/2.jpg ***!
+  \***************************************/
+/***/ ((module) => {
+
+module.exports = "/images/2.jpg?d6748620498d99b2455dad05e2b6efb8";
+
+/***/ }),
+
+/***/ "./resources/images/assets/3.jpg":
+/*!***************************************!*\
+  !*** ./resources/images/assets/3.jpg ***!
+  \***************************************/
+/***/ ((module) => {
+
+module.exports = "/images/3.jpg?efc8e0b548dd08892ed633cec3b42e4d";
+
+/***/ }),
+
+/***/ "./resources/images/assets/4.jpg":
+/*!***************************************!*\
+  !*** ./resources/images/assets/4.jpg ***!
+  \***************************************/
+/***/ ((module) => {
+
+module.exports = "/images/4.jpg?9e41a1aad2e47c4581fadfe245ed1609";
+
+/***/ }),
+
+/***/ "./resources/images/assets/5.jpg":
+/*!***************************************!*\
+  !*** ./resources/images/assets/5.jpg ***!
+  \***************************************/
+/***/ ((module) => {
+
+module.exports = "/images/5.jpg?864d0145919b14b17fc3c4b19da97b3e";
+
+/***/ }),
+
+/***/ "./resources/images/assets/6.jpg":
+/*!***************************************!*\
+  !*** ./resources/images/assets/6.jpg ***!
+  \***************************************/
+/***/ ((module) => {
+
+module.exports = "/images/6.jpg?dc893a67e88716dce9e4dfbd72e1ba0f";
 
 /***/ }),
 
@@ -46419,37 +46465,75 @@ var render = function () {
     [
       _c(
         "carousel-3d",
-        {
-          attrs: {
-            autoplay: true,
-            "autoplay-timeout": 5000,
-            perspective: 35,
-            space: 200,
-            duration: 500,
-            "slide-class": _vm.slideClass,
-          },
-          on: { change: _vm.onSlideChange },
-        },
-        _vm._l(_vm.items, function (item, index) {
-          return _c("slide", { key: index }, [
-            _c("img", { attrs: { src: item.image, alt: item.title } }),
-            _vm._v(" "),
-            _c("h3", [_vm._v(_vm._s(item.title))]),
-          ])
-        }),
+        { attrs: { space: 500 }, on: { afterChange: _vm.updateCurrentSlide } },
+        [
+          _c("slide", { attrs: { index: 0 } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/1.jpg */ "./resources/images/assets/1.jpg"),
+                alt: "Slide 1",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("slide", { attrs: { index: 1 } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/2.jpg */ "./resources/images/assets/2.jpg"),
+                alt: "Slide 2",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("slide", { attrs: { index: 2 } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/3.jpg */ "./resources/images/assets/3.jpg"),
+                alt: "Slide 3",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("slide", { attrs: { index: 3 } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/4.jpg */ "./resources/images/assets/4.jpg"),
+                alt: "Slide 4",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("slide", { attrs: { index: 4 } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/5.jpg */ "./resources/images/assets/5.jpg"),
+                alt: "Slide 5",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("slide", { attrs: { index: 5 } }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/6.jpg */ "./resources/images/assets/6.jpg"),
+                alt: "Slide 6",
+              },
+            }),
+          ]),
+        ],
         1
       ),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "carousel-indicators" },
-        _vm._l(_vm.items, function (item, index) {
+        { staticClass: "indicator" },
+        _vm._l(_vm.slidesCount, function (i) {
           return _c("span", {
-            key: index,
-            class: { active: index === _vm.activeIndex },
+            key: i,
+            class: { active: i === _vm.currentSlide },
             on: {
               click: function ($event) {
-                return _vm.onIndicatorClick(index)
+                return _vm.goToSlide(i)
               },
             },
           })

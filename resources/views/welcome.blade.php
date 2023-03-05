@@ -22,20 +22,21 @@
 
         <div class="content">
             <div class="text animated">
-                <h1>"Being on top is easy. Sustaining is another story."</h1>
-                <h4>
+                <p class ="message">YOUR COMPETITIVE ADVANTAGE</class>
+                <p class="message1">"Being on top is easy. Sustaining is another story."</p>
+                <p class= "message2">
                 Twenty five (25) years in the business prove our strength in various technologies, deep knowledge of major industries, and excellence in quality service delivery only by engineering experts.
                 </br>Quality lies in adopting international standard processes in development. Innovation is adapting and embracing technology to grow the business.
                 </br>Consistency in quality delivery and innovation makes AWS your strategic partner in global business. Together, we sustain your competitive advantage.
-                </h4>
+</p >
             </div>
             <div class="image animated">
               <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper">
             </div>
         </div>
-        <div class="carousel-text">
+        <div class="carousel-content">
           <h3>SERVICES & SOLUTIONS</h3>
-          <h1>GET THE BEST SERVICE FOR YOUR NEEDS</h1>
+          <h1>Get The Best Service For Your Needs</h1>
           <carousel></carousel>
         </div>
 
@@ -49,18 +50,46 @@
 
 <style scoped>
   /**CAROUSEL CONTENT */
-
+.carousel-content{
+  text-align: center;
+  padding-bottom: 50px;
+}
   /**CONTENT */
   .content {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px 0;
+    margin: 100px 0;
   }
-  
+.message {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 18px;
+margin-left:100px;
+color: #0F76A0;
 
+}
+.message1 {
+  font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 60px;
+    line-height: 60px;
+    margin-left:100px;
+}
+.message2 {
+  font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left:100px;
+}
   .text {
     flex: 1 1 100%;
     padding: 0 25px;
+    
   }
 
   .image {
