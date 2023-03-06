@@ -15,24 +15,25 @@
         <div class="banner">
             <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper" class="banner-img">
             <div class="banner-text">
-                <h1>Global IT Excellence</h1>
+                <h1>Global <span style="color: rgba(48, 54, 159, 0.9)">IT</span> Excellence</h1>
                 <p> Human Resource | Business | Technology | Innovation</p>
             </div>
         </div> 
 
         <div class="content">
-            <div class="text animated">
-                <p class ="message">YOUR COMPETITIVE ADVANTAGE</class>
-                <p class="message1">"Being on top is easy. Sustaining is another story."</p>
-                <p class= "message2">
-                Twenty five (25) years in the business prove our strength in various technologies, deep knowledge of major industries, and excellence in quality service delivery only by engineering experts.
-                </br>Quality lies in adopting international standard processes in development. Innovation is adapting and embracing technology to grow the business.
-                </br>Consistency in quality delivery and innovation makes AWS your strategic partner in global business. Together, we sustain your competitive advantage.</p >
-            </div>
-            <div class="image animated">
-              <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper">
-            </div>
-        </div>
+  <div class="grid-item text animated">
+    <p class ="message">YOUR COMPETITIVE ADVANTAGE</p>
+    <p class="message1">"Being on top is easy. Sustaining is another story."</p>
+    <p class="message2">
+      Twenty five (25) years in the business prove our strength in various technologies, deep knowledge of major industries, and excellence in quality service delivery only by engineering experts.
+      <br>Quality lies in adopting international standard processes in development. Innovation is adapting and embracing technology to grow the business.
+      <br>Consistency in quality delivery and innovation makes AWS your strategic partner in global business. Together, we sustain your competitive advantage.
+    </p>
+  </div>
+  <div class="grid-item image animated">
+    <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper">
+  </div>
+</div>
         <div class="carousel-content">
           <p class="carousel-message">SERVICES & SOLUTIONS</p>
           <p class="carousel-message1">Get The Best Service For Your <span style ="color:#0F76A0"> Needs</span<</p>
@@ -60,7 +61,7 @@
   
 }
 .carousel-message{
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
@@ -68,66 +69,69 @@ line-height: 20px;
 /* identical to box height */
 color: #0F76A0;
 }
-.carousel-message1{
-  font-family: 'Lato';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 40px;
-/* identical to box height */
-
-
-
+.carousel-message1 {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 40px;
+  margin-bottom: 100px;
+  /* identical to box height */
 }
   /**CONTENT */
   .content {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 100px 0;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin: 200px 100px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
 .message {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 18px;
-margin-left:100px;
-color: #0F76A0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0F76A0;
+  margin-left: 20px;
+  margin-right: 20px;
+
 
 }
+
 .message1 {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 60px;
     line-height: 60px;
-    margin-left:100px;
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 .message2 {
-  font-family: 'Lato';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 30px;
-    line-height: 30px;
-    margin-left:100px;
-}
-  .text {
-    flex: 1 1 100%;
-    padding: 0 25px;
-    
-  }
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: light;
+  font-size: 30px;
+  line-height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;}
 
   .image {
     flex: 1 1 100%;
     text-align: center;
     margin-top: 25px;
-    margin-right: 100px;
+
+
   }
 
   .image img {
     max-width: 100%;
     height: 100%;
-    width: 80%;
+    width: 700px;
     margin: 0 auto;
   }
 
@@ -148,6 +152,7 @@ color: #0F76A0;
       margin-top: 0;
       padding-right: 100px;
     }
+    
   }
 
   /** Banner CSS */
@@ -196,9 +201,13 @@ color: #0F76A0;
   }
 
   .banner-text h1 {
-    font-size: 4em;
-    margin: 0;
-  }
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
 
   .banner-text p {
     font-size: 1.5em;
