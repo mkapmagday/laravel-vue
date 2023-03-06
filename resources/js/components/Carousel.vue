@@ -6,7 +6,7 @@
       :controls-next-html="'&#10093;'"
       :controls-width="30"
       :controls-height="60"
-      :clickable="false"
+      :clickable="true"
       :autoplay="true"
       :autoplay-timeout="3000"
       :indicator-enabled="true"
@@ -70,6 +70,10 @@ export default {
   margin: 0;
 }
 
+.carousel-3d-container figure img {
+  height: 100%;
+}
+
 .carousel-3d-container figcaption {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -81,13 +85,24 @@ export default {
   font-size: 12px;
   min-width: 100%;
   box-sizing: border-box;
-  
 }
-  .carousel-3d-container {
-    width: 80%; /* adjust width */
-    height: 400px; /* adjust height */
-    margin: 0 auto;
-  }
+
+.carousel-3d-container {
+  width: 80%; /* adjust width */
+  height: 400px;
+  margin: 0 auto;
+}
+
+.carousel-3d-container figure {
+  margin: 0;
+  height: 100%; /* set the height of the figure to 100% */
+}
+
+.carousel-3d-container figure img {
+  height: 100%;
+  object-fit: cover; /* ensure that the image covers the entire figure element */
+}
+
 
 .carousel-3d-container .indicator {
   bottom: 5px;
