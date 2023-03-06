@@ -81,25 +81,26 @@ line-height: 40px;
     margin: 100px 0;
   }
 .message {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 18px;
-color: #0F76A0;
-margin-left: 100px;
-    margin-right: 100px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0F76A0;
+  margin-left: 20px;
+  margin-right: 20px;
 
 
 }
+
 .message1 {
   font-family: 'Lato';
     font-style: normal;
     font-weight: 100;
     font-size: 60px;
     line-height: 60px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
 
 }
 .message2 {
@@ -108,9 +109,8 @@ margin-left: 100px;
     font-weight: 100;
     font-size: 30px;
     line-height: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-
+    margin-left: 20px;
+    margin-right: 20px;
 
 }
 
@@ -118,8 +118,7 @@ margin-left: 100px;
     flex: 1 1 100%;
     text-align: center;
     margin-top: 25px;
-    margin-left: 100px;
-    margin-right: 100px;
+
 
   }
 
