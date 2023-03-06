@@ -5339,6 +5339,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -46481,6 +46482,8 @@ var render = function () {
             "autoplay-timeout": 3000,
             "indicator-enabled": true,
             "indicator-dynamic-bullets": true,
+            width: 700,
+            height: 500,
           },
         },
         _vm._l(_vm.slides, function (slide, i) {

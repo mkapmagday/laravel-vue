@@ -11,6 +11,7 @@
       :autoplay-timeout="3000"
       :indicator-enabled="true"
       :indicator-dynamic-bullets="true"
+      :width="700" :height="500"
     >
       <slide v-for="(slide, i) in slides" :key="i" :index="i">
         <figure>
