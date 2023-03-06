@@ -68,14 +68,11 @@ export default {
 .carousel-3d-container figure {
   margin: 0;
 }
-<<<<<<< HEAD
 
 .carousel-3d-container figure img {
   height: 100%;
 }
 
-=======
->>>>>>> d1accd7b23d80723b9a6a7b94d239123dd7640a0
 .carousel-3d-container figcaption {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -88,7 +85,6 @@ export default {
   min-width: 100%;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 
 .carousel-3d-container {
   width: 80%; /* adjust width */
@@ -107,15 +103,6 @@ export default {
 }
 
 
-=======
-  .carousel-3d-container {
-    width: 80%; /* adjust width */
-    height: 400px; /* adjust height */
-    margin: 200px 100px;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  }
->>>>>>> d1accd7b23d80723b9a6a7b94d239123dd7640a0
 .carousel-3d-container .indicator {
   bottom: 5px;
   left: 50%;
