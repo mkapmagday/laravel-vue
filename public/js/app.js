@@ -5306,35 +5306,8 @@ module.exports = {
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-carousel-3d */ "./node_modules/vue-carousel-3d/dist/carousel-3d.common.js");
-/* harmony import */ var vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5349,26 +5322,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+new Vue({
+  el: 'body',
+  data: {
+    slides: 5
+  },
   components: {
-    Carousel3d: vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__.Carousel3d,
-    Slide: vue_carousel_3d__WEBPACK_IMPORTED_MODULE_0__.Slide
-  },
-  data: function data() {
-    return {
-      currentSlide: 1,
-      slidesCount: 6
-    };
-  },
-  methods: {
-    updateCurrentSlide: function updateCurrentSlide(index) {
-      this.currentSlide = index + 1;
-    },
-    goToSlide: function goToSlide(index) {
-      this.currentSlide = index;
-      this.$refs.carousel3d.goToSlide(index - 1);
-    }
+    'carousel-3d': window['carousel-3d'].Carousel3d,
+    'slide': window['carousel-3d'].Slide
   }
 });
 
@@ -10769,10 +10730,10 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css&":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -10786,7 +10747,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nh1 {\r\n  font-family: \"Open Sans\", sans-serif; /* use Open Sans as the font */\r\n  font-weight: 400; /* use a bold font weight to make it more prominent */\r\n  letter-spacing: 0.10rem; /* add a slight letter spacing for better readability */\r\n  text-transform: capitalize; /* capitalize the first letter of each word */\r\n  color: #333; /* use a dark grey color for better contrast */\r\n  margin-bottom: 1.5rem; /* add some margin to separate the heading from the content below */\n}\n.carousel .img{\r\n  max-width: 20rem;\r\n  max-height: 20rem;\r\n  margin: 0 auto;\r\n  border-radius: 50%;\n}\n.slide-title {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 33%;\r\n  transform: translate(-50%, -50%);\r\n  font-size: 25px;\r\n  color: #ffffff;\r\n  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);\r\n  z-index: 1;\r\n  background-color: rgba(255, 255, 255, 0.2);\r\n  padding: 10px;\r\n  border-radius: 10px;\n}\n.indicator {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 20px;\n}\n.indicator span {\r\n  width: 10px;\r\n  height: 10px;\r\n  border-radius: 50%;\r\n  background-color: #ccc;\r\n  margin: 0 10px;\r\n  cursor: pointer;\n}\n.indicator span.active {\r\n  background-color: #333;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carousel-3d-container[data-v-fe98726a] {\r\n  padding: 20px;\r\n  font-size: 22px;\n}\n.carousel-3d-slide[data-v-fe98726a] {\r\n  padding: 0;\n}\n.title[data-v-fe98726a] {\r\n  font-size: inherit;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10914,66 +10875,6 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
-
-/***/ }),
-
-/***/ "./resources/images/assets/1.jpg":
-/*!***************************************!*\
-  !*** ./resources/images/assets/1.jpg ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = "/images/1.jpg?f5f276c07ecd8c67e4ed591033c79b4f";
-
-/***/ }),
-
-/***/ "./resources/images/assets/2.jpg":
-/*!***************************************!*\
-  !*** ./resources/images/assets/2.jpg ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = "/images/2.jpg?d6748620498d99b2455dad05e2b6efb8";
-
-/***/ }),
-
-/***/ "./resources/images/assets/3.jpg":
-/*!***************************************!*\
-  !*** ./resources/images/assets/3.jpg ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = "/images/3.jpg?efc8e0b548dd08892ed633cec3b42e4d";
-
-/***/ }),
-
-/***/ "./resources/images/assets/4.jpg":
-/*!***************************************!*\
-  !*** ./resources/images/assets/4.jpg ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = "/images/4.jpg?9e41a1aad2e47c4581fadfe245ed1609";
-
-/***/ }),
-
-/***/ "./resources/images/assets/5.jpg":
-/*!***************************************!*\
-  !*** ./resources/images/assets/5.jpg ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = "/images/5.jpg?864d0145919b14b17fc3c4b19da97b3e";
-
-/***/ }),
-
-/***/ "./resources/images/assets/6.jpg":
-/*!***************************************!*\
-  !*** ./resources/images/assets/6.jpg ***!
-  \***************************************/
-/***/ ((module) => {
-
-module.exports = "/images/6.jpg?dc893a67e88716dce9e4dfbd72e1ba0f";
 
 /***/ }),
 
@@ -42041,10 +41942,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css&":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -42054,7 +41955,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_id_fe98726a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css&");
 
             
 
@@ -42063,11 +41964,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_id_fe98726a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_id_fe98726a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -46217,9 +46118,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Carousel_vue_vue_type_template_id_fe98726a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Carousel.vue?vue&type=template&id=fe98726a& */ "./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&");
+/* harmony import */ var _Carousel_vue_vue_type_template_id_fe98726a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Carousel.vue?vue&type=template&id=fe98726a&scoped=true& */ "./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&scoped=true&");
 /* harmony import */ var _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carousel.vue?vue&type=script&lang=js& */ "./resources/js/components/Carousel.vue?vue&type=script&lang=js&");
-/* harmony import */ var _Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css&");
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+/* harmony import */ var _Carousel_vue_vue_type_style_index_0_id_fe98726a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css& */ "./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -46231,11 +46135,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Carousel_vue_vue_type_template_id_fe98726a___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Carousel_vue_vue_type_template_id_fe98726a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Carousel_vue_vue_type_template_id_fe98726a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Carousel_vue_vue_type_template_id_fe98726a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "fe98726a",
   null
   
 )
@@ -46339,7 +46243,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default())); 
 
 /***/ }),
 
@@ -46359,15 +46267,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css& ***!
-  \*******************************************************************************/
+/***/ "./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css& ***!
+  \*******************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_id_fe98726a_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=style&index=0&id=fe98726a&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -46398,19 +46306,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a& ***!
-  \*****************************************************************************/
+/***/ "./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&scoped=true&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&scoped=true& ***!
+  \*****************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_template_id_fe98726a___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_template_id_fe98726a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_template_id_fe98726a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_template_id_fe98726a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_template_id_fe98726a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=template&id=fe98726a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_template_id_fe98726a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=template&id=fe98726a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&scoped=true&");
 
 
 /***/ }),
@@ -46449,10 +46357,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a& ***!
-  \********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Carousel.vue?vue&type=template&id=fe98726a&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -46467,117 +46375,23 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { attrs: { id: "example" } },
     [
       _c(
         "carousel-3d",
-        { attrs: { space: 500 }, on: { afterChange: _vm.updateCurrentSlide } },
-        [
-          _c("slide", { attrs: { index: 0 } }, [
-            _c("img", {
-              staticStyle: {
-                width: "1000px",
-                height: "900px",
-                "border-radius": "50%",
-              },
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/1.jpg */ "./resources/images/assets/1.jpg"),
-                alt: "Slide 1",
-              },
-            }),
+        { attrs: { "inverse-scaling": 1500, space: 800 } },
+        _vm._l(_vm.slides, function (slide, i) {
+          return _c("slide", { attrs: { index: i } }, [
+            _c("span", { staticClass: "title" }, [_vm._v("You know")]),
             _vm._v(" "),
-            _c("h1", { staticClass: "slide-title" }, [
-              _vm._v("Web / Cloud / Mobile Application Development"),
+            _c("p", [
+              _vm._v(
+                "You know, being a test pilot isn't always the healthiest business in the world."
+              ),
             ]),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 1 } }, [
-            _c("img", {
-              staticStyle: { width: "1000px", height: "900px" },
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/2.jpg */ "./resources/images/assets/2.jpg"),
-                alt: "Slide 2",
-              },
-            }),
-            _vm._v(" "),
-            _c("h1", { staticClass: "slide-title" }, [
-              _vm._v("Big Data Analytics Machine Learning / AI"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 2 } }, [
-            _c("img", {
-              staticStyle: { width: "1000px", height: "900px" },
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/3.jpg */ "./resources/images/assets/3.jpg"),
-                alt: "Slide 3",
-              },
-            }),
-            _vm._v(" "),
-            _c("h1", { staticClass: "slide-title" }, [
-              _vm._v("AIoT / Edge IoT GPU Computing"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 3 } }, [
-            _c("img", {
-              staticStyle: { width: "1000px", height: "900px" },
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/4.jpg */ "./resources/images/assets/4.jpg"),
-                alt: "Slide 4",
-              },
-            }),
-            _vm._v(" "),
-            _c("h4", { staticClass: "slide-title" }, [
-              _vm._v("Embedded Software & Application Development"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 4 } }, [
-            _c("img", {
-              staticStyle: { width: "1000px", height: "900px" },
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/5.jpg */ "./resources/images/assets/5.jpg"),
-                alt: "Slide 5",
-              },
-            }),
-            _vm._v(" "),
-            _c("h4", { staticClass: "slide-title" }, [
-              _vm._v("Quality Assurance / Software Testing / Test Automation"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 5 } }, [
-            _c("img", {
-              staticStyle: { width: "1000px", height: "900px" },
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/6.jpg */ "./resources/images/assets/6.jpg"),
-                alt: "Slide 6",
-              },
-            }),
-            _vm._v(" "),
-            _c("h1", { staticClass: "slide-title" }, [
-              _vm._v("Global Business Expansion Support"),
-            ]),
-          ]),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "indicator" },
-        _vm._l(_vm.slidesCount, function (i) {
-          return _c("span", {
-            key: i,
-            class: { active: i === _vm.currentSlide },
-            on: {
-              click: function ($event) {
-                return _vm.goToSlide(i)
-              },
-            },
-          })
+          ])
         }),
-        0
+        1
       ),
     ],
     1
