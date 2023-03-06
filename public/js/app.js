@@ -5339,10 +5339,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5352,18 +5348,26 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      currentSlide: 1,
-      slidesCount: 6
+      slides: [{
+        img: __webpack_require__(/*! ../../images/assets/1.jpg */ "./resources/images/assets/1.jpg"),
+        caption: 'Caption for Slide 1'
+      }, {
+        img: __webpack_require__(/*! ../../images/assets/2.jpg */ "./resources/images/assets/2.jpg"),
+        caption: 'Caption for Slide 2'
+      }, {
+        img: __webpack_require__(/*! ../../images/assets/3.jpg */ "./resources/images/assets/3.jpg"),
+        caption: 'Caption for Slide 3'
+      }, {
+        img: __webpack_require__(/*! ../../images/assets/4.jpg */ "./resources/images/assets/4.jpg"),
+        caption: 'Caption for Slide 4'
+      }, {
+        img: __webpack_require__(/*! ../../images/assets/5.jpg */ "./resources/images/assets/5.jpg"),
+        caption: 'Caption for Slide 5'
+      }, {
+        img: __webpack_require__(/*! ../../images/assets/6.jpg */ "./resources/images/assets/6.jpg"),
+        caption: 'Caption for Slide 6'
+      }]
     };
-  },
-  methods: {
-    updateCurrentSlide: function updateCurrentSlide(index) {
-      this.currentSlide = index + 1;
-    },
-    goToSlide: function goToSlide(index) {
-      this.currentSlide = index;
-      this.$refs.carousel3d.goToSlide(index - 1);
-    }
   }
 });
 
@@ -10781,7 +10785,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carousel {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.indicator {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin-top: 20px;\n}\n.indicator span {\r\n  width: 10px;\r\n  height: 10px;\r\n  border-radius: 50%;\r\n  background-color: #ccc;\r\n  margin: 0 10px;\r\n  cursor: pointer;\n}\n.indicator span.active {\r\n  background-color: #333;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.carousel-3d-container figure {\r\n  margin: 0;\n}\n.carousel-3d-container figcaption {\r\n  position: absolute;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  color: #fff;\r\n  bottom: 0;\r\n  position: absolute;\r\n  bottom: 0;\r\n  padding: 15px;\r\n  font-size: 12px;\r\n  min-width: 100%;\r\n  box-sizing: border-box;\n}\n.carousel-3d-container {\r\n    width: 80%; /* adjust width */\r\n    height: 400px; /* adjust height */\r\n    margin: 0 auto;\n}\n.carousel-3d-container .indicator {\r\n  bottom: 5px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  position: absolute;\r\n  display: flex;\n}\n.carousel-3d-container .indicator button {\r\n  border-radius: 50%;\r\n  width: 8px;\r\n  height: 8px;\r\n  border: none;\r\n  margin-right: 5px;\r\n  background-color: #fff;\r\n  opacity: 0.5;\r\n  cursor: pointer;\r\n  transition: all 0.2s ease-in-out;\n}\n.carousel-3d-container .indicator button.active {\r\n  opacity: 1;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -46465,80 +46469,30 @@ var render = function () {
     [
       _c(
         "carousel-3d",
-        { attrs: { space: 500 }, on: { afterChange: _vm.updateCurrentSlide } },
-        [
-          _c("slide", { attrs: { index: 0 } }, [
-            _c("img", {
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/1.jpg */ "./resources/images/assets/1.jpg"),
-                alt: "Slide 1",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 1 } }, [
-            _c("img", {
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/2.jpg */ "./resources/images/assets/2.jpg"),
-                alt: "Slide 2",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 2 } }, [
-            _c("img", {
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/3.jpg */ "./resources/images/assets/3.jpg"),
-                alt: "Slide 3",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 3 } }, [
-            _c("img", {
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/4.jpg */ "./resources/images/assets/4.jpg"),
-                alt: "Slide 4",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 4 } }, [
-            _c("img", {
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/5.jpg */ "./resources/images/assets/5.jpg"),
-                alt: "Slide 5",
-              },
-            }),
-          ]),
-          _vm._v(" "),
-          _c("slide", { attrs: { index: 5 } }, [
-            _c("img", {
-              attrs: {
-                src: __webpack_require__(/*! ../../images/assets/6.jpg */ "./resources/images/assets/6.jpg"),
-                alt: "Slide 6",
-              },
-            }),
-          ]),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "indicator" },
-        _vm._l(_vm.slidesCount, function (i) {
-          return _c("span", {
-            key: i,
-            class: { active: i === _vm.currentSlide },
-            on: {
-              click: function ($event) {
-                return _vm.goToSlide(i)
-              },
-            },
-          })
+        {
+          attrs: {
+            "controls-visible": true,
+            "controls-prev-html": "&#10092; ",
+            "controls-next-html": "&#10093;",
+            "controls-width": 30,
+            "controls-height": 60,
+            clickable: false,
+            autoplay: true,
+            "autoplay-timeout": 3000,
+            "indicator-enabled": true,
+            "indicator-dynamic-bullets": true,
+          },
+        },
+        _vm._l(_vm.slides, function (slide, i) {
+          return _c("slide", { key: i, attrs: { index: i } }, [
+            _c("figure", [
+              _c("img", { attrs: { src: slide.img, alt: "" } }),
+              _vm._v(" "),
+              _c("figcaption", [_vm._v(_vm._s(slide.caption))]),
+            ]),
+          ])
         }),
-        0
+        1
       ),
     ],
     1

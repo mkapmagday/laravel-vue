@@ -86,8 +86,10 @@ font-style: normal;
 font-weight: 600;
 font-size: 15px;
 line-height: 18px;
-margin-left:100px;
 color: #0F76A0;
+margin-left: 100px;
+    margin-right: 100px;
+
 
 }
 .message1 {
@@ -96,7 +98,9 @@ color: #0F76A0;
     font-weight: 100;
     font-size: 60px;
     line-height: 60px;
-    margin-left:100px;
+    margin-left: 100px;
+    margin-right: 100px;
+
 }
 .message2 {
   font-family: 'Lato';
@@ -104,19 +108,19 @@ color: #0F76A0;
     font-weight: 100;
     font-size: 30px;
     line-height: 30px;
-    margin-left:100px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+
 }
-  .text {
-    flex: 1 1 100%;
-    padding: 0 25px;
-    
-  }
 
   .image {
     flex: 1 1 100%;
     text-align: center;
     margin-top: 25px;
+    margin-left: 100px;
     margin-right: 100px;
+
   }
 
   .image img {
