@@ -1,79 +1,127 @@
 <template>
   <div>
-    <carousel-3d :space="500" @afterChange="updateCurrentSlide">
-      <slide :index="0">
-        <img :src="require('../../images/assets/1.jpg')" alt="Slide 1">
-      </slide>
-      <slide :index="1">
-        <img :src="require('../../images/assets/2.jpg')" alt="Slide 2">
-      </slide>
-      <slide :index="2">
-        <img :src="require('../../images/assets/3.jpg')" alt="Slide 3">
-      </slide>
-      <slide :index="3">
-        <img :src="require('../../images/assets/4.jpg')" alt="Slide 4">
-      </slide>
-      <slide :index="4">
-        <img :src="require('../../images/assets/5.jpg')" alt="Slide 5">
-      </slide>
-      <slide :index="5">
-        <img :src="require('../../images/assets/6.jpg')" alt="Slide 6">
+    <carousel-3d
+      :controls-visible="true"
+      :controls-prev-html="'&#10092; '"
+      :controls-next-html="'&#10093;'"
+      :controls-width="30"
+      :controls-height="60"
+      :clickable="true"
+      :autoplay="true"
+      :autoplay-timeout="3000"
+      :indicator-enabled="true"
+      :indicator-dynamic-bullets="true"
+      :width="700" :height="500"
+    >
+      <slide v-for="(slide, i) in slides" :key="i" :index="i">
+        <figure>
+          <img :src="slide.img" alt="">
+          <figcaption>{{ slide.caption }}</figcaption>
+        </figure>
       </slide>
     </carousel-3d>
-    <div class="indicator">
-      <span v-for="i in slidesCount" :key="i" :class="{ active: i === currentSlide }" @click="goToSlide(i)"></span>
-    </div>
   </div>
 </template>
-
 <script>
 import { Carousel3d, Slide } from 'vue-carousel-3d';
 
 export default {
   components: {
     Carousel3d,
-    Slide,
+    Slide
   },
   data() {
     return {
-      currentSlide: 1,
-      slidesCount: 6,
-    };
-  },
-  methods: {
-    updateCurrentSlide(index) {
-      this.currentSlide = index + 1;
-    },
-    goToSlide(index) {
-      this.currentSlide = index;
-      this.$refs.carousel3d.goToSlide(index - 1);
-    },
-  },
-};
+      slides: [
+        {
+          img: require('../../images/assets/1.jpg'),
+          caption: 'Caption for Slide 1'
+        },
+        {
+          img: require('../../images/assets/2.jpg'),
+          caption: 'Caption for Slide 2'
+        },
+        {
+          img: require('../../images/assets/3.jpg'),
+          caption: 'Caption for Slide 3'
+        },
+        {
+          img: require('../../images/assets/4.jpg'),
+          caption: 'Caption for Slide 4'
+        },
+        {
+          img: require('../../images/assets/5.jpg'),
+          caption: 'Caption for Slide 5'
+        },
+        {
+          img: require('../../images/assets/6.jpg'),
+          caption: 'Caption for Slide 6'
+        }
+        
+      ]
+    }
+  }
+}
 </script>
 
 <style>
-.carousel {
-  max-width: 800px;
+.carousel-3d-container figure {
+  margin: 0;
+}
+
+.carousel-3d-container figure img {
+  height: 100%;
+}
+
+.carousel-3d-container figcaption {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  bottom: 0;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  font-size: 12px;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-3d-container {
+  width: 80%; /* adjust width */
+  height: 400px;
   margin: 0 auto;
 }
-.indicator {
+
+.carousel-3d-container figure {
+  margin: 0;
+  height: 100%; /* set the height of the figure to 100% */
+}
+
+.carousel-3d-container figure img {
+  height: 100%;
+  object-fit: cover; /* ensure that the image covers the entire figure element */
+}
+
+
+.carousel-3d-container .indicator {
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
-
-.indicator span {
-  width: 10px;
-  height: 10px;
+.carousel-3d-container .indicator button {
   border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 10px;
+  width: 8px;
+  height: 8px;
+  border: none;
+  margin-right: 5px;
+  background-color: #fff;
+  opacity: 0.5;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-
-.indicator span.active {
-  background-color: #333;
+.carousel-3d-container .indicator button.active {
+  opacity: 1;
 }
-
 </style>
