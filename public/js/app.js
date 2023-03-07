@@ -5384,6 +5384,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5434,7 +5455,60 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'Navbar'
+  data: function data() {
+    return {
+      isControlSidebarVisible: false,
+      navbarItems: [{
+        id: 1,
+        label: "About",
+        url: "#"
+      }, {
+        id: 2,
+        label: "Services & Solutions",
+        url: "#"
+      }, {
+        id: 3,
+        label: "Clients",
+        url: "#"
+      }, {
+        id: 4,
+        label: "Careers",
+        url: "#"
+      }, {
+        id: 5,
+        label: "Contacts",
+        url: "#"
+      }]
+    };
+  },
+  computed: {
+    controlSidebarItems: function controlSidebarItems() {
+      var _this = this;
+      // Filter out the items that are already in the navbar
+      var filteredItems = this.navbarItems.filter(function (item) {
+        return !_this.isItemInNavbar(item);
+      });
+
+      // Concatenate the filtered items with the original navbarItems
+      return [].concat(_toConsumableArray(filteredItems), _toConsumableArray(this.navbarItems));
+    }
+  },
+  methods: {
+    isItemInNavbar: function isItemInNavbar(item, excludeItem) {
+      var _this2 = this;
+      if (item === excludeItem) {
+        return false;
+      }
+      if (item.isDropdown) {
+        return item.dropdownItems.some(function (subItem) {
+          return _this2.isItemInNavbar(subItem, excludeItem);
+        });
+      } else {
+        var linkSelector = "a.nav-link[href=\"".concat(item.url, "\"]");
+        return document.querySelector(linkSelector) !== null;
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -10833,7 +10907,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-6dde423b] {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  background-color: transparent;\r\n  transition: background-color 0.5s ease;\n}\n.navbar.scrolled[data-v-6dde423b] {\r\n  background-color: white;\r\n  transition: background-color 0.5s ease;\n}\n.navbar-brand[data-v-6dde423b] {\r\n  display: flex;\r\n  align-items: center;\n}\n.navbar-brand img[data-v-6dde423b] {\r\n  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));\r\n  margin-right: 10px;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b]:hover {\r\n  color: #007bff;\n}\n.dropdown-menu[data-v-6dde423b] {\r\n  border: none;\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n}\n.dropdown-item[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.dropdown-item[data-v-6dde423b]:hover {\r\n  color: #007bff;\r\n  background-color: transparent;\n}\n.dropdown-menu[data-v-6dde423b]::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -10px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 10px solid transparent;\r\n \r\n\r\n  border-bottom-color: #fff;\n}\n.dropdown-menu[data-v-6dde423b]::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -8px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 8px solid transparent;\r\n  border-bottom-color: rgba(0, 0, 0, 0.15);\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-6dde423b] {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  background-color: transparent;\r\n  transition: background-color 0.5s ease;\r\n  z-index: 1040;\n}\n.navbar-brand[data-v-6dde423b] {\r\n  display: flex;\r\n  align-items: center;\n}\n.navbar-brand img[data-v-6dde423b] {\r\n  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));\r\n  margin-right: 10px;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b]:hover {\r\n  color: #007bff;\n}\n.dropdown-menu[data-v-6dde423b] {\r\n  border: none;\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n}\n.dropdown-item[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.dropdown-item[data-v-6dde423b]:hover {\r\n  color: #007bff;\r\n  background-color: transparent;\n}\n.dropdown-menu[data-v-6dde423b]::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -10px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 10px solid transparent;\r\n\r\n  border-bottom-color: #fff;\n}\n.dropdown-menu[data-v-6dde423b]::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -8px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 8px solid transparent;\r\n  border-bottom-color: rgba(0, 0, 0, 0.15);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -46746,12 +46820,142 @@ var render = function () {
                 height: "40",
               },
             }),
-            _vm._v("\r\n        Member of Ubicom Group\r\n      "),
+            _vm._v("\n      Member of Ubicom Group\n    "),
           ]),
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
-          _vm._m(1),
+          _c(
+            "div",
+            {
+              staticClass: "collapse navbar-collapse justify-content-end",
+              attrs: { id: "navbarNav" },
+            },
+            [
+              _c(
+                "ul",
+                { staticClass: "navbar-nav ml-auto" },
+                [
+                  _vm._l(_vm.navbarItems, function (item) {
+                    return _c(
+                      "li",
+                      {
+                        key: item.id,
+                        staticClass: "nav-item",
+                        class: { dropdown: item.isDropdown },
+                      },
+                      [
+                        !item.isDropdown
+                          ? _c(
+                              "a",
+                              {
+                                staticClass: "nav-link",
+                                attrs: { href: item.url },
+                              },
+                              [_vm._v(_vm._s(item.label))]
+                            )
+                          : _c(
+                              "a",
+                              {
+                                staticClass: "nav-link dropdown-toggle",
+                                attrs: {
+                                  href: item.url,
+                                  id: "navbarDropdown",
+                                  role: "button",
+                                  "data-bs-toggle": "dropdown",
+                                  "aria-expanded": "false",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  "\n            " +
+                                    _vm._s(item.label) +
+                                    "\n          "
+                                ),
+                              ]
+                            ),
+                        _vm._v(" "),
+                        item.isDropdown
+                          ? _c(
+                              "ul",
+                              {
+                                staticClass: "dropdown-menu",
+                                attrs: { "aria-labelledby": "navbarDropdown" },
+                              },
+                              _vm._l(item.dropdownItems, function (subItem) {
+                                return _c("li", { key: subItem.id }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "dropdown-item",
+                                      attrs: { href: subItem.url },
+                                    },
+                                    [_vm._v(_vm._s(subItem.label))]
+                                  ),
+                                ])
+                              }),
+                              0
+                            )
+                          : _vm._e(),
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _vm._m(1),
+                ],
+                2
+              ),
+            ]
+          ),
+        ]),
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", {
+      directives: [
+        {
+          name: "show",
+          rawName: "v-show",
+          value: _vm.isControlSidebarVisible,
+          expression: "isControlSidebarVisible",
+        },
+      ],
+      staticClass: "control-sidebar-bg",
+      on: { click: _vm.hideControlSidebar },
+    }),
+    _vm._v(" "),
+    _c(
+      "aside",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.isControlSidebarVisible,
+            expression: "isControlSidebarVisible",
+          },
+        ],
+        staticClass: "control-sidebar control-sidebar-dark",
+      },
+      [
+        _c("div", { staticClass: "p-3" }, [
+          _c("h5", [_vm._v("Control Sidebar")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Customize your site's layout")]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            _vm._l(_vm.controlSidebarItems, function (item) {
+              return _c("li", { key: item.id }, [
+                !_vm.isItemInNavbar(item)
+                  ? _c("a", { attrs: { href: item.url } }, [
+                      _vm._v(_vm._s(item.label)),
+                    ])
+                  : _vm._e(),
+              ])
+            }),
+            0
+          ),
         ]),
       ]
     ),
@@ -46762,118 +46966,41 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "navbar-toggler",
-        attrs: {
-          type: "button",
-          "data-bs-toggle": "collapse",
-          "data-bs-target": "#navbarNav",
-          "aria-controls": "navbarNav",
-          "aria-expanded": "false",
-          "aria-label": "Toggle navigation",
+    return _c("button", { staticClass: "navbar-toggler" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link",
+          attrs: {
+            "data-widget": "control-sidebar",
+            "data-slide": "true",
+            href: "#",
+            role: "button",
+          },
         },
-      },
-      [_c("span", { staticClass: "navbar-toggler-icon" })]
-    )
+        [_c("i", { staticClass: "fas fa-th-large" })]
+      ),
+    ])
   },
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "collapse navbar-collapse justify-content-end",
-        attrs: { id: "navbarNav" },
-      },
-      [
-        _c("ul", { staticClass: "navbar-nav ml-auto" }, [
-          _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("About"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Services & Solutions"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Clients"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Careers"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link", attrs: { href: "#" } }, [
-              _vm._v("Contacts"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item dropdown" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link dropdown-toggle",
-                attrs: {
-                  href: "#",
-                  id: "navbarDropdown",
-                  role: "button",
-                  "data-bs-toggle": "dropdown",
-                  "aria-expanded": "false",
-                },
-              },
-              [_vm._v("\r\n              Account\r\n            ")]
-            ),
-            _vm._v(" "),
-            _c(
-              "ul",
-              {
-                staticClass: "dropdown-menu",
-                attrs: { "aria-labelledby": "navbarDropdown" },
-              },
-              [
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "dropdown-item", attrs: { href: "#" } },
-                    [_vm._v("Login")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "dropdown-item", attrs: { href: "#" } },
-                    [_vm._v("Register")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [_c("hr", { staticClass: "dropdown-divider" })]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { staticClass: "dropdown-item", attrs: { href: "#" } },
-                    [_vm._v("Logout")]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
-        ]),
-      ]
-    )
+    return _c("li", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "nav-link",
+          attrs: {
+            "data-widget": "control-sidebar",
+            "data-slide": "true",
+            href: "#",
+            role: "button",
+          },
+        },
+        [_c("i", { staticClass: "fas fa-th-large" })]
+      ),
+    ])
   },
 ]
 render._withStripped = true

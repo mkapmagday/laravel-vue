@@ -8,7 +8,10 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-carousel-3d@0.2.0/dist/vue-carousel-3d.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/js/adminlte.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js"></script>
 </head>
 
 <body>
@@ -45,17 +48,76 @@
                     <carousel></carousel>
         </div>
 
+
         
 
         <fter></fter>
     </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-widget="control-sidebar"]').controlSidebar();
 
+            // Hide the control sidebar when clicking outside of it
+            $(document).on('click', function (e) {
+                if ($(e.target).closest('.control-sidebar').length === 0 && $(e.target).closest('.navbar-toggler').length === 0) {
+                    $('[data-widget="control-sidebar"]').controlSidebar('hide');
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>
 
 
 <style scoped>
+    /** SIDEBAR */
+    .control-sidebar {
+  position: fixed;
+  top: 50px; /* adjust this to the height of your navigation bar */
+  right: -250px;
+  width: 250px;
+  height: calc(100vh - 50px); /* adjust this to leave room for your navigation bar */
+  background-color: #f4f6f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1030;
+  transition: right 0.3s ease-in-out;
+}
+
+.control-sidebar.open {
+  right: 0;
+}
+
+.control-sidebar .sidebar-heading {
+  background-color: #e9ecef;
+  color: #495057;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.control-sidebar .nav-link {
+  color: #495057;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.control-sidebar .nav-link:hover {
+  background-color: #dfe2e5;
+}
+
+.control-sidebar .nav-item:last-child .nav-link {
+  border-bottom: none;
+}
+
+.control-sidebar .nav-item:last-child .nav-link:hover {
+  background-color: transparent;
+}
+
+
     /**CAROUSEL CONTENT */
     .carousel-content {
         text-align: center;
