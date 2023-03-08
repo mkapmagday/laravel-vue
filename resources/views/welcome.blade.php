@@ -47,9 +47,47 @@
             <p class="carousel-message1">Get The Best Service For Your <span style="color:#0F76A0"> Needs</span<< /p>
                     <carousel></carousel>
         </div>
+        <div class="sponsor-wrapper">
+            <div class="container2">
+                <div id="s1">
+                    <ul class="marquee-content-items">
+                        <li><a href="https://group.bureauveritas.com/" target="_blank">
+                            <img src="../res/sponsor/BV_Certification_ISO9001and27001.webp" width="auto" height="100"></a>
+                        </li>
+                        <!--<li><a href="http://www.istqb.org/" target="_blank">
+                            <img src="../res/sponsor/Partner-Program-Platinum.png" width="auto" height="180"></a>
+                        </li> -->
+                        <li><a href="https://himap.ph/" target="_blank">
+                            <img src="{{ asset('images/s1.jpg') }}" width="auto" height="90"></a>
+                        </li>
+                        <li><a href="https://www.philnits.org/" target="_blank">
+                            <img src="{{ asset('images/s1.jpg') }}" width="auto" height="110"></a>
+                        </li>
+                        <li><a href="https://www.psia.org.ph/" target="_blank">
+                            <img src="{{ asset('images/s1.jpg') }}" width="auto" height="130"></a>
+                        </li>
+                        <li><a href="https://www.ipa.go.jp/index-e.html" target="_blank">
+                            <img src="{{ asset('images/s1.jpg') }}" width="auto" height="120"></a>
+                        </li>
+                        <li><a href="https://www.immap.com.ph/" target="_blank">
+                            <img src="{{ asset('images/s1.jpg') }}" width="auto" height="120"></a>
+                        </li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
 
-
-        
+        <div class="carousel-container">
+            <div class="image-carousel">
+              <img src="{{ asset('images/s1.jpg') }}" class="col-sm">
+              <img src="{{ asset('images/s2.png') }}" class="col-sm">
+              <img src="{{ asset('images/s3.png') }}" class="col-sm">
+              <img src="{{ asset('images/s4.png') }}" class="col-sm">
+              <img src="{{ asset('images/s5.png') }}" class="col-sm">
+              <img src="{{ asset('images/s6.png') }}" class="col-sm">
+            </div>
+          </div>
+          
 
         <fter></fter>
     </div>
@@ -72,6 +110,37 @@
 
 
 <style scoped>
+   /** SPONSOR WRAPPER*/
+.marquee-content-items{display:inline-block;padding:5px;margin:0;height:100px;position:relative;}
+.marquee-content-items li{display:inline-block;line-height:100px;color:#fff;}
+.marquee-content-items li:after{content:"";margin:100em 1em;} 
+   .carousel-container {
+  margin: 20px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image-carousel {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.image-carousel img {
+  height: 150px;
+  margin-right: 20px;
+  width: calc(100%/6);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% + 120px)); /* the width of the images + margin-right */
+  }
+}
     /** SIDEBAR */
     .control-sidebar {
   position: fixed;

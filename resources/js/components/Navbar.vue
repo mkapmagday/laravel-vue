@@ -7,11 +7,10 @@
         Member of Ubicom Group
       </a>
 
-      <button class="navbar-toggler">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </button>
+    <button class="navbar-toggler" data-widget="control-sidebar" data-slide="true" type="button">
+        <i class="fas fa-th-large"></i>
+    </button>
+
 
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -71,28 +70,27 @@ export default {
     };
   },
   computed: {
-    controlSidebarItems() {
-      // Filter out the items that are already in the navbar or control sidebar
-      const filteredItems = this.navbarItems.filter(
-        (item) => !this.isItemInNavbar(item) && !this.isItemInControlSidebar(item)
-      );
+  controlSidebarItems() {
+    // Filter out the items that are already in the navbar or control sidebar
+    const filteredItems = this.navbarItems.filter(
+      (item) => !this.isItemInNavbar(item) && !this.isItemInControlSidebar(item)
+    );
 
-      // Get the items that are not visible in the navbar and add them to the control sidebar
-      const invisibleItems = this.navbarItems.filter(
-        (item) => !this.isItemVisibleInNavbar(item)
-      );
+    // Get the items that are not visible in the navbar and add them to the control sidebar
+    const invisibleItems = this.navbarItems.filter(
+      (item) => !this.isItemVisibleInNavbar(item) && !this.isItemInControlSidebar(item)
+    ).map((item) => ({
+      ...item,
+    }));
 
-      // Concatenate the filtered items and the invisible items with the original navbarItems
-      return [
-        ...filteredItems,
-        ...invisibleItems.filter(
-          (item) => !this.isItemInControlSidebar(item)
-        ).map((item) => ({
-          ...item,
-        })),
-      ];
-    },
+    // Concatenate the filtered items and the invisible items with the original navbarItems
+    return [
+      ...filteredItems,
+      ...invisibleItems,
+    ];
   },
+},
+
   methods: {
     isItemInNavbar(item) {
       return this.navbarItems.includes(item);
