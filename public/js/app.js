@@ -5384,17 +5384,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5484,29 +5485,40 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   computed: {
     controlSidebarItems: function controlSidebarItems() {
       var _this = this;
-      // Filter out the items that are already in the navbar
+      // Filter out the items that are already in the navbar or control sidebar
       var filteredItems = this.navbarItems.filter(function (item) {
-        return !_this.isItemInNavbar(item);
+        return !_this.isItemInNavbar(item) && !_this.isItemInControlSidebar(item);
       });
 
-      // Concatenate the filtered items with the original navbarItems
-      return [].concat(_toConsumableArray(filteredItems), _toConsumableArray(this.navbarItems));
+      // Get the items that are not visible in the navbar and add them to the control sidebar
+      var invisibleItems = this.navbarItems.filter(function (item) {
+        return !_this.isItemVisibleInNavbar(item);
+      });
+
+      // Concatenate the filtered items and the invisible items with the original navbarItems
+      return [].concat(_toConsumableArray(filteredItems), _toConsumableArray(invisibleItems.filter(function (item) {
+        return !_this.isItemInControlSidebar(item);
+      }).map(function (item) {
+        return _objectSpread({}, item);
+      })));
     }
   },
   methods: {
-    isItemInNavbar: function isItemInNavbar(item, excludeItem) {
-      var _this2 = this;
-      if (item === excludeItem) {
-        return false;
-      }
-      if (item.isDropdown) {
-        return item.dropdownItems.some(function (subItem) {
-          return _this2.isItemInNavbar(subItem, excludeItem);
-        });
-      } else {
-        var linkSelector = "a.nav-link[href=\"".concat(item.url, "\"]");
-        return document.querySelector(linkSelector) !== null;
-      }
+    isItemInNavbar: function isItemInNavbar(item) {
+      return this.navbarItems.includes(item);
+    },
+    isItemInControlSidebar: function isItemInControlSidebar(item) {
+      return this.controlSidebarItems.includes(item);
+    },
+    isItemVisibleInNavbar: function isItemVisibleInNavbar(item) {
+      // In a real implementation, this would depend on user permissions or authentication
+      return true;
+    },
+    toggleControlSidebar: function toggleControlSidebar() {
+      this.isControlSidebarVisible = !this.isControlSidebarVisible;
+    },
+    hideControlSidebar: function hideControlSidebar() {
+      this.isControlSidebarVisible = false;
     }
   }
 });
@@ -46874,29 +46886,6 @@ var render = function () {
                                 ),
                               ]
                             ),
-                        _vm._v(" "),
-                        item.isDropdown
-                          ? _c(
-                              "ul",
-                              {
-                                staticClass: "dropdown-menu",
-                                attrs: { "aria-labelledby": "navbarDropdown" },
-                              },
-                              _vm._l(item.dropdownItems, function (subItem) {
-                                return _c("li", { key: subItem.id }, [
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass: "dropdown-item",
-                                      attrs: { href: subItem.url },
-                                    },
-                                    [_vm._v(_vm._s(subItem.label))]
-                                  ),
-                                ])
-                              }),
-                              0
-                            )
-                          : _vm._e(),
                       ]
                     )
                   }),

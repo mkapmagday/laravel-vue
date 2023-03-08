@@ -18,7 +18,7 @@
     <div id="app">
         <navbar></navbar>
         <div class="banner">
-            <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper" class="banner-img">
+            <img src="{{ asset('images/skyscraper.png') }}" alt="Skyscraper" class="banner-img">
             <div class="banner-text">
                 <h1>Global IT Excellence</h1>
                 <p> Human Resource | Business | Technology | Innovation</p>
@@ -39,7 +39,7 @@
                 </p>
             </div>
             <div class="image animated">
-                <img src="{{ asset('storage/images/assets/skyscraper.png') }}" alt="Skyscraper">
+                <img src="{{ asset('images/skyscraper.png') }}" alt="Skyscraper">
             </div>
         </div>
         <div class="carousel-content">

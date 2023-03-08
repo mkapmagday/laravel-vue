@@ -21,11 +21,6 @@
             <a v-else class="nav-link dropdown-toggle" :href="item.url" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{ item.label }}
             </a>
-            <ul v-if="item.isDropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li v-for="subItem in item.dropdownItems" :key="subItem.id">
-                <a class="dropdown-item" :href="subItem.url">{{ subItem.label }}</a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
               <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
@@ -76,33 +71,50 @@ export default {
     };
   },
   computed: {
-  controlSidebarItems() {
-    // Filter out the items that are already in the navbar
-    const filteredItems = this.navbarItems.filter(
-      (item) => !this.isItemInNavbar(item)
-    );
-    
-    // Concatenate the filtered items with the original navbarItems
-    return [...filteredItems, ...this.navbarItems];
+    controlSidebarItems() {
+      // Filter out the items that are already in the navbar or control sidebar
+      const filteredItems = this.navbarItems.filter(
+        (item) => !this.isItemInNavbar(item) && !this.isItemInControlSidebar(item)
+      );
+
+      // Get the items that are not visible in the navbar and add them to the control sidebar
+      const invisibleItems = this.navbarItems.filter(
+        (item) => !this.isItemVisibleInNavbar(item)
+      );
+
+      // Concatenate the filtered items and the invisible items with the original navbarItems
+      return [
+        ...filteredItems,
+        ...invisibleItems.filter(
+          (item) => !this.isItemInControlSidebar(item)
+        ).map((item) => ({
+          ...item,
+        })),
+      ];
+    },
   },
-},
   methods: {
-    isItemInNavbar(item, excludeItem) {
-      if (item === excludeItem) {
-        return false;
-      }
-      if (item.isDropdown) {
-        return item.dropdownItems.some((subItem) =>
-          this.isItemInNavbar(subItem, excludeItem)
-        );
-      } else {
-        const linkSelector = `a.nav-link[href="${item.url}"]`;
-        return document.querySelector(linkSelector) !== null;
-      }
+    isItemInNavbar(item) {
+      return this.navbarItems.includes(item);
+    },
+    isItemInControlSidebar(item) {
+      return this.controlSidebarItems.includes(item);
+    },
+    isItemVisibleInNavbar(item) {
+      // In a real implementation, this would depend on user permissions or authentication
+      return true;
+    },
+    toggleControlSidebar() {
+      this.isControlSidebarVisible = !this.isControlSidebarVisible;
+    },
+    hideControlSidebar() {
+      this.isControlSidebarVisible = false;
     },
   },
 };
 </script>
+
+
 
 
 <style scoped>
