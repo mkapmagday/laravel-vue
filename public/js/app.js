@@ -5332,13 +5332,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5350,22 +5343,28 @@ __webpack_require__.r(__webpack_exports__);
     return {
       slides: [{
         img: __webpack_require__(/*! ../../images/assets/1.jpg */ "./resources/images/assets/1.jpg"),
-        caption: 'Caption for Slide 1'
+        title: 'Embedded Software & Application Development',
+        caption: 'Since our inception, we have actively pursued product development across numerous industries. By adapting quickly to the product development cycle of the customer, we aim to ensure quality and reduce delivery times.'
       }, {
         img: __webpack_require__(/*! ../../images/assets/2.jpg */ "./resources/images/assets/2.jpg"),
-        caption: 'Caption for Slide 2'
+        title: 'Embedded Software & Application Development',
+        caption: 'Since our inception, we have actively pursued product development across numerous industries. By adapting quickly to the product development cycle of the customer, we aim to ensure quality and reduce delivery times.'
       }, {
         img: __webpack_require__(/*! ../../images/assets/3.jpg */ "./resources/images/assets/3.jpg"),
-        caption: 'Caption for Slide 3'
+        title: 'Embedded Software & Application Development',
+        caption: 'Since our inception, we have actively pursued product development across numerous industries. By adapting quickly to the product development cycle of the customer, we aim to ensure quality and reduce delivery times.'
       }, {
         img: __webpack_require__(/*! ../../images/assets/4.jpg */ "./resources/images/assets/4.jpg"),
-        caption: 'Caption for Slide 4'
+        title: 'Embedded Software & Application Development',
+        caption: 'Since our inception, we have actively pursued product development across numerous industries. By adapting quickly to the product development cycle of the customer, we aim to ensure quality and reduce delivery times.'
       }, {
         img: __webpack_require__(/*! ../../images/assets/5.jpg */ "./resources/images/assets/5.jpg"),
-        caption: 'Caption for Slide 5'
+        title: 'Embedded Software & Application Development',
+        caption: 'Since our inception, we have actively pursued product development across numerous industries. By adapting quickly to the product development cycle of the customer, we aim to ensure quality and reduce delivery times.'
       }, {
         img: __webpack_require__(/*! ../../images/assets/6.jpg */ "./resources/images/assets/6.jpg"),
-        caption: 'Caption for Slide 6'
+        title: 'Embedded Software & Application Development',
+        caption: 'Since our inception, we have actively pursued product development across numerous industries. By adapting quickly to the product development cycle of the customer, we aim to ensure quality and reduce delivery times.'
       }]
     };
   }
@@ -5384,25 +5383,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -5461,43 +5441,46 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
       navbarItems: [{
         id: 1,
         label: "About",
-        url: "#"
+        url: "/About"
       }, {
         id: 2,
         label: "Services & Solutions",
-        url: "#"
+        url: "/Services&Solutions"
       }, {
         id: 3,
         label: "Clients",
-        url: "#"
+        url: "/Clients"
       }, {
         id: 4,
         label: "Careers",
-        url: "#"
+        url: "/Careers"
       }, {
         id: 5,
         label: "Contacts",
-        url: "#"
+        url: "/Contacts"
       }]
     };
   },
-  computed: {
-    controlSidebarItems: function controlSidebarItems() {
-      var _this = this;
-      // Filter out the items that are already in the navbar or control sidebar
-      var filteredItems = this.navbarItems.filter(function (item) {
-        return !_this.isItemInNavbar(item) && !_this.isItemInControlSidebar(item);
-      });
+  mounted: function mounted() {
+    // Get the navbar element
+    var navbar = document.querySelector('.navbar');
 
-      // Get the items that are not visible in the navbar and add them to the control sidebar
-      var invisibleItems = this.navbarItems.filter(function (item) {
-        return !_this.isItemVisibleInNavbar(item) && !_this.isItemInControlSidebar(item);
-      }).map(function (item) {
-        return _objectSpread({}, item);
-      });
+    // Listen for the window to scroll
+    console.log(navbar);
+    window.addEventListener('scroll', function () {
+      // Check if the user has scrolled past the top of the navbar
+      if (window.scrollY > navbar.offsetTop) {
+        // Add the 'solid' class to the navbar
+        navbar.classList.add('solid');
+      } else {
+        // Remove the 'solid' class from the navbar
+        navbar.classList.remove('solid');
+      }
+    });
 
-      // Concatenate the filtered items and the invisible items with the original navbarItems
-      return [].concat(_toConsumableArray(filteredItems), _toConsumableArray(invisibleItems));
+    // On page load, check if the navbar is already below the top
+    if (window.scrollY > navbar.offsetTop) {
+      navbar.classList.add('solid');
     }
   },
   methods: {
@@ -10868,7 +10851,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.carousel-3d-container figure {\r\n  margin: 0;\n}\n.carousel-3d-container figure img {\r\n  height: 100%;\n}\n.carousel-3d-container figcaption {\r\n  position: absolute;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  color: #fff;\r\n  bottom: 0;\r\n  position: absolute;\r\n  bottom: 0;\r\n  padding: 15px;\r\n  font-size: 12px;\r\n  min-width: 100%;\r\n  box-sizing: border-box;\n}\n.carousel-3d-container {\r\n  width: 80%; /* adjust width */\r\n  height: 400px;\r\n  margin: 0 auto;\n}\n.carousel-3d-container figure {\r\n  margin: 0;\r\n  height: 100%; /* set the height of the figure to 100% */\n}\n.carousel-3d-container figure img {\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover; /* ensure that the image covers the entire figure element */\n}\n.carousel-3d-container .indicator {\r\n  bottom: 5px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  position: absolute;\r\n  display: flex;\n}\n.carousel-3d-container .indicator button {\r\n  border-radius: 50%;\r\n  width: 8px;\r\n  height: 8px;\r\n  border: none;\r\n  margin-right: 5px;\r\n  background-color: #fff;\r\n  opacity: 0.5;\r\n  cursor: pointer;\r\n  transition: all 0.2s ease-in-out;\n}\n.carousel-3d-container .indicator button.active {\r\n  opacity: 1;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nfigcaption{\r\n  padding: 0;\n}\n.carousel-3d-container figure {\r\n  margin: 0;\n}\n.carousel-3d-container figure img {\r\n  height: 100%;\n}\n.carousel-3d-container figcaption {\r\n  position: absolute;\r\n  background-color: rgba(0, 0, 0, 0.5);\r\n  color: #fff;\r\n  bottom: 0;\r\n  position: absolute;\r\n  bottom: 0;\r\n  padding: 15px;\r\n  font-size: 12px;\r\n  min-width: 100%;\r\n  box-sizing: border-box;\n}\n.carousel-3d-container {\r\n  width: 80%;\r\n  /* adjust width */\r\n  height: 400px;\r\n  margin: 0 auto;\n}\n.carousel-3d-container figure {\r\n  margin: 0;\r\n  height: 100%;\r\n  /* set the height of the figure to 100% */\n}\n.carousel-3d-container figure img {\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  /* ensure that the image covers the entire figure element */\n}\n.carousel-3d-container .indicator {\r\n  bottom: 5px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  position: absolute;\r\n  display: flex;\n}\n.carousel-3d-container .indicator button {\r\n  border-radius: 50%;\r\n  width: 8px;\r\n  height: 8px;\r\n  border: none;\r\n  margin-right: 5px;\r\n  background-color: #fff;\r\n  opacity: 0.5;\r\n  cursor: pointer;\r\n  transition: all 0.2s ease-in-out;\n}\n.carousel-3d-container .indicator button.active {\r\n  opacity: 1;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10916,7 +10899,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-6dde423b] {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  background-color: transparent;\r\n  transition: background-color 0.5s ease;\r\n  z-index: 1040;\n}\n.navbar-brand[data-v-6dde423b] {\r\n  display: flex;\r\n  align-items: center;\n}\n.navbar-brand img[data-v-6dde423b] {\r\n  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));\r\n  margin-right: 10px;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b]:hover {\r\n  color: #007bff;\n}\n.dropdown-menu[data-v-6dde423b] {\r\n  border: none;\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n}\n.dropdown-item[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.dropdown-item[data-v-6dde423b]:hover {\r\n  color: #007bff;\r\n  background-color: transparent;\n}\n.dropdown-menu[data-v-6dde423b]::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -10px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 10px solid transparent;\r\n\r\n  border-bottom-color: #fff;\n}\n.dropdown-menu[data-v-6dde423b]::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -8px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 8px solid transparent;\r\n  border-bottom-color: rgba(0, 0, 0, 0.15);\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar[data-v-6dde423b] {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  transition: background-color 0.5s ease;\r\n  z-index: 1040;\n}\n.navbar.solid[data-v-6dde423b] {\r\n  background-color: #000 !important;\r\n  /* replace with your desired black color */\n}\n.navbar.transparent[data-v-6dde423b] {\r\n  background-color: transparent;\n}\n.navbar-brand[data-v-6dde423b] {\r\n  display: flex;\r\n  align-items: center;\r\n  color: white;\n}\n.navbar-brand img[data-v-6dde423b] {\r\n  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));\r\n  margin-right: 10px;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b] {\r\n  color: #fff;\r\n  font-weight: 500;\n}\n.navbar-nav .nav-item .nav-link[data-v-6dde423b]:hover {\r\n  color: #007bff;\n}\n.dropdown-menu[data-v-6dde423b] {\r\n  border: none;\r\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n}\n.dropdown-item[data-v-6dde423b] {\r\n  color: #333;\r\n  font-weight: 500;\n}\n.dropdown-item[data-v-6dde423b]:hover {\r\n  color: #007bff;\r\n  background-color: transparent;\n}\n.dropdown-menu[data-v-6dde423b]::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -10px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 10px solid transparent;\r\n\r\n  border-bottom-color: #fff;\n}\n.dropdown-menu[data-v-6dde423b]::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  top: -8px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  border: 8px solid transparent;\r\n  border-bottom-color: rgba(0, 0, 0, 0.15);\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -46573,7 +46556,13 @@ var render = function () {
             _c("figure", [
               _c("img", { attrs: { src: slide.img, alt: "" } }),
               _vm._v(" "),
-              _c("figcaption", [_vm._v(_vm._s(slide.caption))]),
+              _c("figcaption", [
+                _c("h4", { staticStyle: { color: "blue" } }, [
+                  _vm._v(_vm._s(slide.title)),
+                ]),
+                _vm._v(" "),
+                _c("h5", [_vm._v(_vm._s(slide.caption))]),
+              ]),
             ]),
           ])
         }),
@@ -46606,183 +46595,209 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", { staticClass: "footer bg-dark" }, [
+    _c("div", { staticClass: "container py-5" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-3 mb-4 mb-md-0" }, [
+          _c("h4", { staticClass: "footer-heading mb-4" }, [
+            _c("img", {
+              attrs: {
+                src: __webpack_require__(/*! ../../images/assets/nav-icon-hover.png */ "./resources/images/assets/nav-icon-hover.png"),
+                alt: "Ubicom Group",
+                height: "40",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _vm._m(3),
+      ]),
+      _vm._v(" "),
+      _vm._m(4),
+      _vm._v(" "),
+      _vm._m(5),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "footer bg-dark" }, [
-      _c("div", { staticClass: "container py-5" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-3 mb-4 mb-md-0" }, [
-            _c("h4", { staticClass: "footer-heading mb-4" }, [
-              _vm._v("Company"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "list-unstyled" }, [
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("About Us"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Our Team"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Jobs"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Blog"),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3 mb-4 mb-md-0" }, [
-            _c("h4", { staticClass: "footer-heading mb-4" }, [
-              _vm._v("Products"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "list-unstyled" }, [
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Product 1"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Product 2"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Product 3"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Product 4"),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3 mb-4 mb-md-0" }, [
-            _c("h4", { staticClass: "footer-heading mb-4" }, [
-              _vm._v("Services"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "list-unstyled" }, [
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Service 1"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Service 2"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Service 3"),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
-                  _vm._v("Service 4"),
-                ]),
-              ]),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" }, [
-            _c("h4", { staticClass: "footer-heading mb-4" }, [
-              _vm._v("Contact Us"),
-            ]),
-            _vm._v(" "),
-            _c("ul", { staticClass: "list-unstyled" }, [
-              _c("li", { staticClass: "mb-3" }, [
-                _c("i", { staticClass: "fas fa-map-marker-alt fa-fw me-3" }),
-                _vm._v(" Address Line 1"),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "mb-3" }, [
-                _c("i", { staticClass: "fas fa-phone fa-fw me-3" }),
-                _vm._v(" +1 (123) 456-7890"),
-              ]),
-              _vm._v(" "),
-              _c("li", [
-                _c("i", { staticClass: "fas fa-envelope fa-fw me-3" }),
-                _vm._v(" info@example.com"),
-              ]),
-            ]),
+    return _c("ul", { staticClass: "list-unstyled" }, [
+      _c("li", [
+        _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+          _vm._v("About Us"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+          _vm._v("Our Team"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+          _vm._v("Jobs"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+          _vm._v("Blog"),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3 mb-4 mb-md-0" }, [
+      _c("h4", { staticClass: "footer-heading mb-4" }, [_vm._v("Products")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-unstyled" }, [
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Product 1"),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row my-5" }, [
-          _c("div", { staticClass: "col-12" }, [
-            _c("hr", { staticClass: "bg-light" }),
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Product 2"),
           ]),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row mb-3" }, [
-          _c("div", { staticClass: "col-md-8" }, [
-            _c("p", { staticClass: "text-muted small" }, [
-              _vm._v("© Copyright © 2022, All Right Reserved "),
-              _c(
-                "a",
-                { attrs: { href: "https://www.awsys-i.com/en/home.php" } },
-                [
-                  _vm._v(
-                    "Advanced World Systems, Inc. | Advanced World Solutions, Inc."
-                  ),
-                ]
-              ),
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Product 3"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Product 4"),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3 mb-4 mb-md-0" }, [
+      _c("h4", { staticClass: "footer-heading mb-4" }, [_vm._v("Services")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-unstyled" }, [
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Service 1"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Service 2"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Service 3"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { staticClass: "text-muted", attrs: { href: "#" } }, [
+            _vm._v("Service 4"),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3" }, [
+      _c("h4", { staticClass: "footer-heading mb-4" }, [_vm._v("Contact Us")]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "list-unstyled" }, [
+        _c("li", { staticClass: "mb-3" }, [
+          _c("i", { staticClass: "fas fa-map-marker-alt fa-fw me-3" }),
+          _vm._v(" Address Line 1"),
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mb-3" }, [
+          _c("i", { staticClass: "fas fa-phone fa-fw me-3" }),
+          _vm._v(" +1 (123) 456-7890"),
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("i", { staticClass: "fas fa-envelope fa-fw me-3" }),
+          _vm._v(" info@example.com"),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row my-5" }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("hr", { staticClass: "bg-light" }),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row mb-3" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("p", { staticClass: "text-muted small" }, [
+          _vm._v("© Copyright © 2022, All Right Reserved "),
+          _c("a", { attrs: { href: "https://www.awsys-i.com/en/home.php" } }, [
+            _vm._v(
+              "Advanced World Systems, Inc. | Advanced World Solutions, Inc."
+            ),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4 text-md-end" }, [
+        _c("ul", { staticClass: "list-inline social-icons" }, [
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-facebook-f" }),
             ]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 text-md-end" }, [
-            _c("ul", { staticClass: "list-inline social-icons" }, [
-              _c("li", { staticClass: "list-inline-item" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "fab fa-facebook-f" }),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "list-inline-item" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "fab fa-twitter" }),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "list-inline-item" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "fab fa-linkedin-in" }),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "list-inline-item" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "fab fa-instagram" }),
-                ]),
-              ]),
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-twitter" }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-linkedin-in" }),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "list-inline-item" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fab fa-instagram" }),
             ]),
           ]),
         ]),
@@ -46817,11 +46832,11 @@ var render = function () {
       "nav",
       {
         staticClass:
-          "navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-transparent",
+          "navbar navbar-expand-lg navbar-light sticky-top transparent",
       },
       [
         _c("div", { staticClass: "container" }, [
-          _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+          _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
             _c("img", {
               attrs: {
                 src: __webpack_require__(/*! ../../images/assets/nav-icon-hover.png */ "./resources/images/assets/nav-icon-hover.png"),
@@ -46829,7 +46844,7 @@ var render = function () {
                 height: "40",
               },
             }),
-            _vm._v("\n      Member of Ubicom Group\n    "),
+            _vm._v("\n        Member of Ubicom Group\n      "),
           ]),
           _vm._v(" "),
           _vm._m(0),
@@ -46877,9 +46892,9 @@ var render = function () {
                               },
                               [
                                 _vm._v(
-                                  "\n            " +
+                                  "\n              " +
                                     _vm._s(item.label) +
-                                    "\n          "
+                                    "\n            "
                                 ),
                               ]
                             ),
@@ -46925,15 +46940,13 @@ var render = function () {
       },
       [
         _c("div", { staticClass: "p-3" }, [
-          _c("h5", [_vm._v("Control Sidebar")]),
-          _vm._v(" "),
-          _c("p", [_vm._v("Customize your site's layout")]),
+          _c("h5", [_vm._v("MENU")]),
           _vm._v(" "),
           _c(
             "ul",
-            _vm._l(_vm.controlSidebarItems, function (item) {
+            _vm._l(_vm.navbarItems, function (item) {
               return _c("li", { key: item.id }, [
-                !_vm.isItemInNavbar(item)
+                _vm.isItemInNavbar(item)
                   ? _c("a", { attrs: { href: item.url } }, [
                       _vm._v(_vm._s(item.label)),
                     ])

@@ -3,7 +3,7 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-md-3 mb-4 mb-md-0">
-          <h4 class="footer-heading mb-4">Company</h4>
+          <h4 class="footer-heading mb-4"><img :src="require('../../images/assets/nav-icon-hover.png')" alt="Ubicom Group" height="40" /></h4>
           <ul class="list-unstyled">
             <li><a href="#" class="text-muted">About Us</a></li>
             <li><a href="#" class="text-muted">Our Team</a></li>
